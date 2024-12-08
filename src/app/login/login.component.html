@@ -1,0 +1,29 @@
+<body>
+  <div class="login-container">
+    <div class="login-box">
+      <div class="profile-icon">
+        <img src="https://www.webiconio.com/_upload/255/image_255.svg" alt="Profile Icon" />
+      </div>
+      <form (ngSubmit)="onSubmit()">
+        <div class="input-group">
+          <label>
+            <span class="icon">📧</span>
+            <input type="email" [(ngModel)]="email" name="email" required placeholder="Email" />
+          </label>
+        </div>
+        <div class="input-group">
+          <label>
+            <span class="icon">🔒</span>
+            <input type="password" [(ngModel)]="password" name="password" required placeholder="Password" />
+          </label>
+        </div>
+        <div class="options">
+        </div>
+        <button type="submit" [disabled]="submitting" class="login-btn">Login</button>
+        <p>¿No tienes cuenta? 
+          <a [routerLink]="['/register']" class="forgot">Regístrate</a>
+        </p>
+      </form>
+    </div>
+  </div>
+</body>
